@@ -17,7 +17,7 @@ const Home = () => {
 
   useEffect(() => {
     console.log('use effect ran');
-    console.log(name);
+    console.log(blogs);
   }, [name])
 
   return (
