@@ -1,14 +1,16 @@
+import {link} from 'react-router-dom'
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 const NavBar = () => {
     return (
         <nav className="navbar">
             <h1>The Yuval Blog</h1>
             <div className="links">
-                <a href="/">home </a>
-                <a href="/create" style={{ 
+                <Link to="/">home </Link>
+                <Link to="/create" style={{ 
           color: 'white', 
-          backgroundColor: '#f1356d',
+          backgroundColor: '#210797',
           borderRadius: '8px' 
-        }}>New Blog</a>
+        }}>New Blog</Link>
             </div>
         </nav>
       );

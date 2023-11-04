@@ -1,50 +1,173 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
-/* base styles */
+/* Reset styles and base styles */
 * {
   margin: 0;
-  font-family: "Quicksand";
-  color: #333;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+body {
+  font-family: "Quicksand", sans-serif;
+  font-size: 16px;
+  color: #333; /* Dark text color for better readability */
+  background-image: url('mypic.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
 .navbar {
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
   padding: 20px;
   display: flex;
   align-items: center;
-  max-width: 600px;
+  max-width: 800px;
   margin: 0 auto;
-  border-bottom: 1px solid #f2f2f2;
-}
-.navbar h1 {
-  color: #f1356d;
-}
-.navbar .links {
-  margin-left: auto;
-}
-.navbar a {
-  margin-left: 16px;
-  text-decoration: none;
-  padding: 6px;
-}
-.navbar a:hover {
-  color: #f1356d;
-}
-.content {
-  max-width: 600px;
-  margin: 40px auto;
-  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  animation: fadeIn 1s;
 }
 
-/* blog previews / list */
+.navbar h1 {
+  color: #210797; /* Pink text color */
+  font-size: 28px;
+  margin-right: 20px;
+}
+
+.navbar .logo {
+  font-weight: 700; /* Bold logo text */
+  font-size: 36px; /* Larger logo text */
+  text-transform: uppercase; /* Uppercase logo text */
+}
+
+.navbar .links {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #210797; /* Darker text color for better readability */
+  font-weight: 500;
+  margin-left: 20px;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #ff69b4; /* Change to a different color on hover */
+}
+
+.content {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff; /* White background color */
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  animation: fadeIn 1s;
+}
+
+/* Blog Previews / List */
 .blog-preview {
-  padding: 10px 16px;
+  padding: 20px;
   margin: 20px 0;
-  border-bottom: 1px solid #fafafa;
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s ease;
 }
+
 .blog-preview:hover {
-  box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
+  transform: translateY(-5px); /* Add a slight lift effect on hover */
 }
+
 .blog-preview h2 {
-  font-size: 20px;
-  color: #f1356d;
-  margin-bottom: 8px;
+  font-size: 24px; /* Larger font size for titles */
+  color: #210797;
+  margin-bottom: 10px;
+}
+
+.blog-preview a {
+  text-decoration: none;
+  color: #333; /* Dark text color for links */
+  font-weight: 500;
+  display: inline-block;
+}
+
+/* Create New Blog Form */
+.create {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.create label {
+  text-align: left;
+  display: block;
+  font-weight: 500;
+}
+
+.create h2 {
+  font-size: 28px; /* Larger font size for form title */
+  color: #210797;
+  margin-bottom: 30px;
+}
+
+.create input,
+.create textarea,
+.create select {
+  width: 100%;
+  padding: 12px; /* Larger padding for better input spacing */
+  margin: 10px 0;
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 4px;
+  box-sizing: border-box;
+  display: block;
+}
+
+.create button {
+  background: #ff69b4; /* Pink background for the button */
+  color: #fff; /* White text color */
+  border: 0;
+  padding: 14px; /* Larger padding for button */
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.create button:hover {
+  background: #210797; /* Darker pink on hover */
+  transform: scale(1.05); /* Slightly increase the button size on hover */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navbar .logo {
+    font-size: 28px; /* Slightly smaller logo text for smaller screens */
+  }
+
+  .navbar a {
+    margin: 10px 0;
+  }
 }
